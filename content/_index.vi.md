@@ -1,40 +1,43 @@
-+++
-title = "Thiết lập Tài Khoản AWS"
-date = 2021
-weight = 1
-chapter = false
-+++
+---
+title : "Triển khai ứng dụng FCJ Management với Auto Scaling Group"
+date :  "`r Sys.Date()`" 
+weight : 1 
+chapter : false
+---
 
-# Tạo tài khoản AWS đầu tiên
+# Triển khai ứng dụng FCJ Management với Auto Scaling Group
 
 #### Tổng quan
-Trong bài lab đầu tiên này, bạn sẽ tạo mới **tài khoản AWS** đầu tiên của mình, tạo **MFA** (Multi-factor Authentication) để gia tăng bảo mật tài khoản của bạn. Bước tiếp theo bạn sẽ tạo **Admin Group**, **Admin User** để quản lý quyền truy cập vào các tài nguyên trong tài khoản của mình thay vì sử dụng user root.\
-Cuối cùng, nếu quá trình xác thực tài khoản của bạn có vấn đề, bạn sẽ được hướng dẫn hỗ trợ xác thực tài khoản với **AWS Support**.
 
-#### Tài khoản AWS (AWS Account)
-**Tài khoản AWS** là phương tiện để bạn có thể truy cập và sử dụng những tài nguyên và dịch vụ của AWS. Theo mặc định, mỗi tài khoản AWS sẽ có một *root user*. *Root user* có toàn quyền với tài khoản AWS của bạn, và quyền hạn của root user không thể bị giới hạn. Nếu bạn mới sử dụng tài khoản AWS lần đầu tiên, bạn sẽ truy cập vào tài khoản dưới danh nghĩa của *root user*.
+Trong hướng dẫn này, chúng ta sẽ thực hiện triển khai ứng dụng bằng cách sử dụng Auto Scaling Group để đảm bảo khả năng mở rộng linh hoạt theo nhu cầu của người truy cập. Ngoài ra, chúng ta cũng sẽ triển khai Load Balancer để cân bằng tải và phân phối yêu cầu từ người dùng đến Application Tier của ứng dụng.
 
-{{% notice note %}}
-Chính vì quyền hạn của **root user** không thể bị giới hạn, AWS khuyên bạn không nên sử dụng trực tiếp *root user* cho bất kỳ công tác nào. Thay vào đó, bạn nên tạo ra một *IAM User* và trao quyền quản trị cho *IAM User* đó để dễ dàng quản lý và giảm thiểu rủi ro.
-{{% /notice %}}
+Hãy đảm bảo bạn đã xem qua tài liệu [Triển khai Ứng dụng FCJ Management trên Máy ảo Windows/AmazonLinux](https://000004.awsstudygroup.com/) để nắm vững cách triển khai ứng dụng trên máy ảo. Chúng ta sẽ cần sử dụng máy ảo **FCJ Management** đã triển khai để thực hiện việc triển khai đồng loạt và mở rộng trong Auto Scaling Group.
 
-#### MFA (Multi-factor Authentication)
-**MFA** là một tính năng được sử dụng để gia tăng bảo mật của tài khoản AWS. Nếu MFA được kích hoạt, bạn sẽ phải nhập mã OTP (One-time Password) mỗi lần bạn đăng nhập vào tài khoản AWS.
+#### Auto Scaling Group
 
-#### IAM Group 
-**IAM Group**  là một công cụ quản lý người dùng (*IAM User*) của AWS. Một IAM Group có thể chứa nhiều IAM User. Các IAM User ở trong một IAM Group đều hưởng chung quyền hạn mà IAM Group đó được gán cho.
+**Auto Scaling Group** (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có khả năng tự động điều chỉnh số lượng các EC2 Instance thành viên dựa trên các chính sách co giãn mà bạn đặt ra.
 
-#### IAM User
-**IAM User** là một đơn vị người dùng của AWS. Khi bạn đăng nhập vào AWS, bạn sẽ phải đăng nhập dưới danh nghĩa của một IAM User. Nếu bạn mới đăng nhập vào AWS lần đầu tiên, bạn sẽ đăng nhập dưới danh nghĩa của *root user* (tạm dịch là người dùng gốc). Ngoài *root user* ra, bạn có thể tạo ra nhiều IAM User khác để cho phép người khác truy cập **dài hạn** vào tài nguyên AWS trong tài khoản AWS của bạn.
+#### Launch Template
 
+**Launch Template** (khuôn mẫu khởi tạo) là một tính năng cho phép bạn tạo ra các khuôn mẫu để khởi tạo EC2 Instance. Điều này giúp bạn tự động hóa và đơn giản hóa việc khởi tạo các EC2 Instance cho dịch vụ Auto Scaling (co giãn tự động).
 
-#### AWS Support
-**AWS Support** là một đơn vị cung cấp các dịch vụ hỗ trợ khách hàng của AWS.
+#### Load Balancer
 
+**Load Balancer** (máy cân bằng tải) là một công cụ cho phép phân phối lưu lượng dữ liệu tới các tài nguyên AWS (trong trường hợp này là các EC2 Instances) trong một Target Group cụ thể.
 
-#### Nội dung chính
+#### Target Group
 
-1. [Tạo tài khoản AWS](1-create-new-aws-account/)
-2. [Thiết lập MFA cho tài khoản AWS (Root)](2-mfa-setup-for-aws-user-(root)/)
-3. [Tài khoản và Nhóm Admin](3-create-admin-user-and-group/)
-4. [Hỗ trợ Xác thực Tài khoản](4-verify-new-account/)
+**Target Group** (nhóm mục tiêu) là một nhóm các tài nguyên AWS sẽ nhận lưu lượng dữ liệu từ Load Balancer và tiếp tục truyền chuyển nó.
+
+![Auto Scaling Group](/images/2-Prerequiste/0.png?featherlight=false&width=50pc)
+
+#### Nội dung
+
+1. [Giới thiệu](1-introduce/)
+2. [Các bước chuẩn bị](2-prerequiste/)
+3. [Khởi tạo Template](3-launchtemplate/)
+4. [Khởi tạo Target Group](4-launchtargetgroup/)
+5. [Khởi tạo LoadBalancer](5-launchloadbalancer/)
+6. [Khởi tạo Auto Scaling Group](6-launchautoscalinggroup/)
+7. [Kiểm tra kết quả](7-result/)
+8. [Dọn dẹp tài nguyên](8-cleanup/)
