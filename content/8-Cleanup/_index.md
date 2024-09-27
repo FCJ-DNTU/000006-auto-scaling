@@ -1,9 +1,9 @@
 ---
-title : "Clean up resources"
-date : "`r Sys.Date()`"
-weight : 8
-chapter : false
-pre : " <b> 8. </b> "
+title: "Clean up resources"
+date: "`r Sys.Date()`"
+weight: 8
+chapter: false
+pre: "<strong>8. </strong>"
 ---
 
 #### Clean up resources

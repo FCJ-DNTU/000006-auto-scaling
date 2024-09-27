@@ -1,8 +1,8 @@
 ---
-title : "Triển khai ứng dụng FCJ Management với Auto Scaling Group"
-date :  "`r Sys.Date()`" 
-weight : 1 
-chapter : false
+title: "Triển khai ứng dụng FCJ Management với Auto Scaling Group"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
 ---
 
 # Triển khai ứng dụng FCJ Management với Auto Scaling Group
@@ -33,11 +33,11 @@ Hãy đảm bảo bạn đã xem qua tài liệu [Triển khai Ứng dụng FCJ 
 
 #### Nội dung
 
-1. [Giới thiệu](1-introduce/)
-2. [Các bước chuẩn bị](2-prerequiste/)
-3. [Khởi tạo Template](3-launchtemplate/)
-4. [Khởi tạo Target Group](4-launchtargetgroup/)
-5. [Khởi tạo LoadBalancer](5-launchloadbalancer/)
-6. [Khởi tạo Auto Scaling Group](6-launchautoscalinggroup/)
-7. [Kiểm tra kết quả](7-result/)
+1. [Giới thiệu](1-introduction/)
+2. [Các bước chuẩn bị](2-preparation/)
+3. [Khởi tạo Template](3-create-launch-template/)
+4. [Thiết lập Load Balancer](4-setup-load-balancer/)
+5. [Kiểm thử](5-test/)
+6. [Khởi tạo Auto Scaling Group](6-create-auto-scaling-group/)
+7. [Kiểm thử các giải pháp](7-test-solutions/)
 8. [Dọn dẹp tài nguyên](8-cleanup/)

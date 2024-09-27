@@ -1,8 +1,8 @@
 ---
-title : "Deploying FCJ Management with Auto Scaling Group"
-date : "`r Sys.Date()`"
-weight : 1
-chapter : false
+title: "Deploying FCJ Management with Auto Scaling Group"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
 ---
 
 # Deploying FCJ Management Application with Auto Scaling Group
@@ -33,11 +33,11 @@ A **Target Group** is a set of AWS resource elements that receive data traffic r
 
 ## Contents
 
-1. [Introduction](1-introduce/)
-2. [Preparation Steps](2-prerequisite/)
-3. [Initialize Template](3-launch-template/)
-4. [Initialize Target Group](4-launch-target-group/)
-5. [Initialize Load Balancer](5-launch-load-balancer/)
-6. [Initialize Auto Scaling Group](6-launch-auto-scaling-group/)
-7. [Check Results](7-result/)
-8. [Resource Cleanup](8-cleanup/)
+1. [Introduction](1-introduction/)
+2. [Preparation](2-preparation/)
+3. [Create Launch Template](3-create-launch-template/)
+4. [Setup Load Balancer](4-setup-load-balancer/)
+5. [Test](5-test/)
+6. [Create Auto Scaling Group](6-create-auto-scaling-group/)
+7. [Test Solutions](7-test-solutions/)
+8. [Clean up Resources](8-cleanup/)

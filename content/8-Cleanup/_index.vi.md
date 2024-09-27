@@ -1,9 +1,9 @@
 ---
-title : "Dọn dẹp tài nguyên"
-date :  "`r Sys.Date()`" 
-weight : 8
-chapter : false
-pre : " <b> 8.   </b> "
+title: "Dọn dẹp tài nguyên"
+date: "`r Sys.Date()`"
+weight: 8
+chapter: false
+pre: "<strong>8. </strong>"
 ---
 
 #### Dọn dẹp tài nguyên
@@ -28,9 +28,9 @@ Chúng ta sẽ dọn dẹp tài nguyên theo thứ tự như sau:
 
 #### Xóa Target Group:
 
-- Truy cập **EC2 Management **Console**
+- Truy cập **EC2 Management **Console\*\*
 - Trên thanh điều hướng bên trái, chọn **Target Groups**
-- Chọn **Target Group** liên quan *tới bài lab.
+- Chọn **Target Group** liên quan \*tới bài lab.
 - Click **Actions**.
 - Click **Delete**.
 - Click **Yes, delete**
@@ -62,7 +62,6 @@ Chúng ta sẽ dọn dẹp tài nguyên theo thứ tự như sau:
 - Click **Manage Instance State**.
 - Chọn **Terminate**.
 - Click **Change State**
-
 
 #### Xóa DB Instance
 
