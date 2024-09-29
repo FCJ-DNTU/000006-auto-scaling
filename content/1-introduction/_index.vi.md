@@ -11,8 +11,8 @@ Trong bài thực hành này, chúng ta sẽ tiến hành triển khai ứng d�
 
 Hãy đảm bảo bạn đã tham khảo tài liệu [Triển khai Ứng dụng FCJ Management trên Máy ảo Windows/AmazonLinux](https://000004.awsstudygroup.com/) và hiểu cách triển khai ứng dụng trên máy ảo. Chúng ta sẽ sử dụng máy ảo **FCJ Management** đã triển khai để thực hiện việc triển khai và mở rộng trong Auto Scaling Group.
 
-#### Sơ lược về Auto Scaling Group
-1. Tại sao cần sử dụng Auto scaling group 
+#### Auto Scaling Group
+1. Tại sao cần sử dụng Auto scaling group?
    
    Khi ứng dụng của chúng ta đưa vào hoạt động, lượng người truy cập sẽ thay đổi theo thời gian, do đó chúng ta cần thường xuyên thay đổi (scaling) lượng instance nhằm nâng cao tính sẵn sàng và tiết kiệm chi phí. Để tự động hóa và linh hoạt trong công việc scaling, chúng ta sẽ có giải pháp là Auto scaling group.
 2. Sơ lược về Auto scaling group

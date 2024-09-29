@@ -99,7 +99,6 @@ pre: "<strong>2.1. </strong>"
    - Chọn **Add rule**
    - Chọn **MYSQL/Aurora** port 3306
    - Sau đó chọn Soure là **FCJ-Management-SG** 
-   - Chọn **Create security group**
 
 ![Image](/images/2-preparation/2.1-network/2.1.13.png?featherlight=false&width=90pc)
 

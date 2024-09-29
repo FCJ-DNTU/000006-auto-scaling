@@ -121,6 +121,6 @@ pre: "<strong>2.3. </strong>"
 
 ![Image](/images/2-preparation/2.3-rds/2.3.19.png?featherlight=false&width=90pc)
 
-13. Có được **Endpoint** và **Port** như dưới đây.
+13. Chúng ta có được **Endpoint** và **Port** như dưới đây.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.20.png?featherlight=false&width=90pc)

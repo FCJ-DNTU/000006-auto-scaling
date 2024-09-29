@@ -6,7 +6,6 @@ chapter: false
 pre: "<strong>2.4. </strong>"
 ---
 
-#### Kết nối EC2 instance và cài đặt ứng dụng
 
 1. Lấy **Public IP address** của EC2 instance
 
@@ -57,14 +56,14 @@ mysql --version
     - Đối với tham số -h, hãy thay thế DNS name (endpoint) cho DB instance, Bạn có thể lấy DNS name ở trong console chi tiết của RDS bạn đã tạo
     - Đối với tham số -P, hãy thay thế port cho DB instance. (3306)
     - Đối với tham số -u, thay bằng master user lúc bạn tạo RDS
-    - Sau khi chạy lệnh thì master user password mà bạn đã đặt khi tạo RDS
+    - Sau khi chạy lệnh thì nhập vào master user password mà bạn đã đặt khi tạo RDS
 ```
 mysql -h fcj-management-db-instance.cdysiiecu90g.ap-southeast-1.rds.amzonaws.com -P 3306 -u admin -p
 ```
 
 ![Image](/images/2-preparation/2.4-data-for-db/2.4.7.png?featherlight=false&width=90pc)
 
-8. Kết nối DB instance thành công. Tiến hành kiểm tra các database trong instance bằng lệnh sẽ in ra danh sách tất cả các cơ sở dữ liệu.
+8. Kết nối DB instance thành công. Tiến hành kiểm tra các database trong instance bằng lệnh sau sẽ in ra danh sách tất cả các cơ sở dữ liệu.
 
 ```
 SHOW DATABASES;

@@ -21,7 +21,7 @@ pre: "<strong>2.2. </strong>"
 
 ![Image](/images/2-preparation/2.2-launch-ec2/2.2.3.png?featherlight=false&width=90pc)
 
-4. Thực hiện cho **AMI**:
+4. Thực hiện chọn **AMI**:
    - Chọn **Quick Start**
    - Chọn **Amazon Linux**
    - Chọn **Amazon Linux 2023 AMI**
@@ -56,6 +56,6 @@ pre: "<strong>2.2. </strong>"
 
 ![Image](/images/2-preparation/2.2-launch-ec2/2.2.8.png?featherlight=false&width=90pc)
 
-10. Khởi tạo instance thành công.
+9. Khởi tạo instance thành công.
 
 ![Image](/images/2-preparation/2.2-launch-ec2/2.2.9.png?featherlight=false&width=90pc)

@@ -1,5 +1,5 @@
 ---
-title: "Triển khai máy chủ web"
+title: "Chuẩn bị các metric cho Predictive scaling"
 date: "`r Sys.Date()`"
 weight: 6
 chapter: false
