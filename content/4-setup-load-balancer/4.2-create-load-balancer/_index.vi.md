@@ -52,9 +52,9 @@ Chúng ta sẽ thấy xuất hiện bảng Create Application Load Balancer
 
 Sau khi tạo Load Balancer chúng ta chọn **FCJ-Management-LB** để xem thông tin
 
-![4.2.6](/images/4-setup-load-balancer/4.2.7.png)
+![4.2.7](/images/4-setup-load-balancer/4.2.7.png)
 
 - Trong phần quản lý Load Balancer đã tạo
   - Chọn **Resource map - new** để xem tổng quan liên kết của Load Balancer
 
-![4.2.7](/images/4-setup-load-balancer/4.2.8.png)
+![4.2.8](/images/4-setup-load-balancer/4.2.8.png)
