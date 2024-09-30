@@ -41,8 +41,9 @@ Sau khi tạo AMI chúng ta sẽ kiểm tra AMI vừa tạo
 
 ![3.3](/images/3-create-launch-template/3.3.png)
 
-- Quá trình khởi tạo AMI sẽ mất khoảng 3 phút, sau quá trình khởi tạo chúng ta sẽ thấy **Status** của AMI chuyển từ trạng **Available**
-
+{{% notice note %}}
+Quá trình khởi tạo AMI sẽ mất khoảng 3 phút, sau quá trình khởi tạo chúng ta sẽ thấy **Status** của AMI chuyển từ trạng **Available**
+{{% /notice %}}
 ![3.4](/images/3-create-launch-template/3.4.png)
 
 Chúng ta vừa hoàn thành tạo một Image để lưu cấu hình của EC2
@@ -95,3 +96,5 @@ Kiểm tra Launch Template vừa tạo
 - Ở đây chúng ta có thể xem lại cấu hình Launch Template chúng ta đã tạo
 
 ![3.11](/images/3-create-launch-template/3.11.png)
+
+Chúng ta vừa hoàn thành tạo Launch Template.
