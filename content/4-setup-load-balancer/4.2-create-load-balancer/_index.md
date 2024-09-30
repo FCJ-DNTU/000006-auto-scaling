@@ -50,6 +50,8 @@ You will see the "Create Application Load Balancer" panel.
 
 ![4.2.6](/images/4-setup-load-balancer/4.2.6.png)
 
+#### Result
+
 After creating the Load Balancer, select **FCJ-Management-LB** to view its information.
 
 ![4.2.7](/images/4-setup-load-balancer/4.2.7.png)

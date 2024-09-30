@@ -88,6 +88,8 @@ In the **Create launch template** panel, fill in the following information:
 
 ![3.9](/images/3-create-launch-template/3.9.png)
 
+#### Result
+
 Check the newly created Launch Template:
 
 - Select **FCJ-Management-template**

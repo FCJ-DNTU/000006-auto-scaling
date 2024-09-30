@@ -87,6 +87,8 @@ Chúng ta vừa hoàn thành tạo một Image để lưu cấu hình của EC2
 
 ![3.9](/images/3-create-launch-template/3.9.png)
 
+#### Kết quả
+
 Kiểm tra Launch Template vừa tạo
 
 - Chọn **FCJ-Management-template**

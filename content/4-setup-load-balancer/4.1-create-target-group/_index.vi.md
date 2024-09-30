@@ -51,6 +51,8 @@ Tiếp theo chúng ta tiến hành **Register target**
 
 ![4.1.6](/images/4-setup-load-balancer/4.1.6.png)
 
+#### Kết quả
+
 Chúng ta đã hoàn thành việc tạo Target Group, chọn Target Group **FCJ-Management-TG** vừa khởi tạo để xem thông tin.
 
 ![4.1.7](/images/4-setup-load-balancer/4.1.7.png)

@@ -8,40 +8,40 @@ pre: "<strong>2.3. </strong>"
 
 #### Tạo Subnet group cho Database instance
 
-1. Truy cập vào **AWS Management Console**
+Truy cập vào **AWS Management Console**
 
-   - Tìm **RDS**
-   - Chọn **RDS**
+- Tìm **RDS**
+- Chọn **RDS**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.1.png?featherlight=false&width=90pc)
 
-2. Tiếp tục:
+Tiếp tục:
 
-   - Chọn **Subnet groups**
-   - Chọn **Create DB subnet group** 
+- Chọn **Subnet groups**
+- Chọn **Create DB subnet group**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.2.png?featherlight=false&width=90pc)
 
-3. Trong giao diện **Create DB subnet group**
+Trong giao diện **Create DB subnet group**
 
-   - **Name**, nhập **`FCJ-Management-Subnet-Group`**
-   - **Description**, nhập **`Subnet Group for FCJ Management`**
-   - Chọn VPC đã tạo.
+- **Name**, nhập **`FCJ-Management-Subnet-Group`**
+- **Description**, nhập **`Subnet Group for FCJ Management`**
+- Chọn VPC đã tạo.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.3.png?featherlight=false&width=90pc)
 
-4. Tiến hành cấu hình **subnet**
+Tiến hành cấu hình **subnet**
 
-   - Chọn các AZ
-   - Chọn các Private subnet
+- Chọn các AZ
+- Chọn các Private subnet
 
 ![Image](/images/2-preparation/2.3-rds/2.3.4.png?featherlight=false&width=90pc)
 
-5. Chọn **Create**
+Chọn **Create**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.5.png?featherlight=false&width=90pc)
 
-6. Thành công tạo **DB Subnet Group** với 2 AZ
+Thành công tạo **DB Subnet Group** với 2 AZ
 
 ![Image](/images/2-preparation/2.3-rds/2.3.6.png?featherlight=false&width=90pc)
 
@@ -49,78 +49,79 @@ pre: "<strong>2.3. </strong>"
 
 #### Tạo Database instance
 
-1. Truy cập vào **RDS AWS Management Console**
+Truy cập vào **RDS AWS Management Console**
 
-   - Chọn **Databases**
-   - Chọn **Create database**
+- Chọn **Databases**
+- Chọn **Create database**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.8.png?featherlight=false&width=90pc)
 
-2. Chọn phương thức tạo **database**
+Chọn phương thức tạo **database**
 
-   - Chọn **Standard create**
+- Chọn **Standard create**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.9.png?featherlight=false&width=90pc)
 
-3. Cấu hình **Engine** database
+Cấu hình **Engine** database
 
-   - Chọn **MySQL**
+- Chọn **MySQL**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.10.png?featherlight=false&width=90pc)
 
-4. Cấu hình **Template**
+Cấu hình **Template**
 
-   - Chọn **Production**
-   - Chọn **Mutil-AZ DB  instance**
+- Chọn **Production**
+- Chọn **Mutil-AZ DB instance**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.11.png?featherlight=false&width=90pc)
 
-5. Tiếp theo, thực hiện cài đặt chi tiết
+Tiếp theo, thực hiện cài đặt chi tiết
 
-   - **DB instance identifier**, nhập **`fcj-management-db-instance`**
-   - **Master username**, nhập **`admin`** 
-   - Chọn sang **Self managed**
+- **DB instance identifier**, nhập **`fcj-management-db-instance`**
+- **Master username**, nhập **`admin`**
+- Chọn sang **Self managed**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.12.png?featherlight=false&width=90pc)
 
-6. Tiếp tục:
-    - **Master password**, nhập tùy ý của bạn (trong bài lab, nhập **```123Vodanhphai```**)
-    - **Confirm password**, nhập lại password 1 lần nữa.
+Tiếp tục: - **Master password**, nhập tùy ý của bạn (trong bài lab, nhập **`123Vodanhphai`**) - **Confirm password**, nhập lại password 1 lần nữa.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.13.png?featherlight=false&width=90pc)
 
-7. Cấu hình chi tiết cho instace
-   - Chọn **``db.m5d.large``**
-   - Chọn **``General Purpose SSD (gp3)``**
-   - Allocated storage nhập vào **``20``**
+Cấu hình chi tiết cho instace
+
+- Chọn **`db.m5d.large`**
+- Chọn **`General Purpose SSD (gp3)`**
+- Allocated storage nhập vào **`20`**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.14.png?featherlight=false&width=90pc)
 
-8. Thực hiện cấu hình Connectivity cho db instance
-   - Chọn **Don't connect to an EC2 compute resouce**
-   - **VPC**, chọn **``AutoScaling-Lab``** đã tạo
-   - **Subnet group**, chọn subnet group đã tạo.
+Thực hiện cấu hình Connectivity cho db instance
+
+- Chọn **Don't connect to an EC2 compute resouce**
+- **VPC**, chọn **`AutoScaling-Lab`** đã tạo
+- **Subnet group**, chọn subnet group đã tạo.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.15.png?featherlight=false&width=90pc)
 
-9. Tiếp tục:
-   - **VPC security group**, Chọn **Choose existing**
-   - **Security Group**, chọn **FCJ-Management-DB-SG** (tránh nhầm lẫn với SG của web).
+Tiếp tục:
+
+- **VPC security group**, Chọn **Choose existing**
+- **Security Group**, chọn **FCJ-Management-DB-SG** (tránh nhầm lẫn với SG của web).
 
 ![Image](/images/2-preparation/2.3-rds/2.3.16.png?featherlight=false&width=90pc)
 
-10. Khởi tạo Initial Database với tên **``awsfcjuer``**, còn lại để mặc định.
+Khởi tạo Initial Database với tên **`awsfcjuer`**, còn lại để mặc định.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.17.png?featherlight=false&width=90pc)
 
-11. Bấm **Create database**
+Bấm **Create database**
 
 ![Image](/images/2-preparation/2.3-rds/2.3.18.png?featherlight=false&width=90pc)
 
-12. Database instance đã được tạo thành công.
+Database instance đã được tạo thành công.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.19.png?featherlight=false&width=90pc)
 
-13. Chúng ta có được **Endpoint** và **Port** như dưới đây.
+Chúng ta có được **Endpoint** và **Port** như dưới đây.
 
 ![Image](/images/2-preparation/2.3-rds/2.3.20.png?featherlight=false&width=90pc)

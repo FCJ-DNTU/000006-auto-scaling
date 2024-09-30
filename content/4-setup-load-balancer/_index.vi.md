@@ -13,5 +13,4 @@ Load Balancer là một bước quan trọng để đảm bảo tính khả dụ
 #### Nội dung
 
 1. [Tạo Target Group](4.1-create-target-group/)
-
 2. [Tạo Load Balancer](4.2-create-load-balancer/)
