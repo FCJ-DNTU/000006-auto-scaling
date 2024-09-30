@@ -50,6 +50,8 @@ Next, we proceed to **Register target**.
 
 ![4.1.6](/images/4-setup-load-balancer/4.1.6.png)
 
+#### Result
+
 We have completed the creation of the Target Group. Select the Target Group **FCJ-Management-TG** that was just created to view its information.
 
 ![4.1.7](/images/4-setup-load-balancer/4.1.7.png)

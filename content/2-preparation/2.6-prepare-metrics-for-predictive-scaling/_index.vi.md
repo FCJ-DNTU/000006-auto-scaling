@@ -12,13 +12,13 @@ Bởi vì Predictive scaling cần phải có một lượng dữ liệu trong v
 
 ### Các bước chuẩn bị
 
-1. Đầu tên là chúng ta sẽ tạo một folder mới với tên là `metric-preparation` và chuyển vào trong thư mục này
+Đầu tên là chúng ta sẽ tạo một folder mới với tên là `metric-preparation` và chuyển vào trong thư mục này
 
 ```bash
 mkdir metric-preparation && cd metric-preparation
 ```
 
-2. Sau đó là tải kịch bản để chuẩn bị các dữ liệu
+Sau đó là tải kịch bản để chuẩn bị các dữ liệu
 
 ```bash
 curl -o prepare-metric-data.sh https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/prepare-metric-data.sh
@@ -26,7 +26,7 @@ curl -o prepare-metric-data.sh https://raw.githubusercontent.com/awslabs/ec2-spo
 
 ![2.6.1.png](/images/2-preparation/2.6-prepare-metric-data/2.6.1.png)
 
-3. Sau khi tải xong thì vào trong để thay đổi phần câu lệnh trong kịch bản này lại một xíu
+Sau khi tải xong thì vào trong để thay đổi phần câu lệnh trong kịch bản này lại một xíu
 
 ```bash
 vim prepare-metric-data.sh
@@ -34,7 +34,7 @@ vim prepare-metric-data.sh
 
 ![2.6.2.png](/images/2-preparation/2.6-prepare-metric-data/2.6.2.png)
 
-4. Sau khi chỉnh sửa xong thì giờ chúng ta tiến hành tải các dữ liệu chưa qua xử lý, đó là lý do vì sao mà chúng ta cần tải kịch bản xử lý dữ liệu này trước. Trước tiên là metric cho các instances.
+Sau khi chỉnh sửa xong thì giờ chúng ta tiến hành tải các dữ liệu chưa qua xử lý, đó là lý do vì sao mà chúng ta cần tải kịch bản xử lý dữ liệu này trước. Trước tiên là metric cho các instances.
 
 ```bash
 curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/metric-cpu.json
@@ -42,7 +42,7 @@ curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-works
 
 ![2.6.3.png](/images/2-preparation/2.6-prepare-metric-data/2.6.3.png)
 
-5. Tiếp theo là dữ liệu cho CPU
+Tiếp theo là dữ liệu cho CPU
 
 ```bash
 curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/metric-cpu.json
@@ -50,7 +50,7 @@ curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-works
 
 ![2.6.4.png](/images/2-preparation/2.6-prepare-metric-data/2.6.4.png)
 
-6. Tiến hành sửa đổi lần lượt 2 loại dữ liệu này, đầu tiên là cho CPU trước
+Tiến hành sửa đổi lần lượt 2 loại dữ liệu này, đầu tiên là cho CPU trước
 
 ```bash
 bash prepare-metric-data.sh metric-cpu.json FCJ-Management-ASG && cat metric-cpu.json
@@ -74,7 +74,7 @@ bash prepare-metric-data.sh metric-instances.json FCJ-Management-ASG && cat metr
 
 Trong Amazon Linux 2023, và dùng đúng AMI thì AWS CLI đã được cài đặt sẵn ở bên trong, lúc này thì chúng ta chỉ cần lấy ra để cấu hình lại các crediential là được. Nên nhớ là bạn phải có một IAM User đủ quyền để tải dữ liệu lên CloudWatch hoặc ít nhất là đủ quyền để làm bài workshop này.
 
-1. Vào trang IAM, vào thông tin IAM User và ấy Access Key Id và Serect Access Key, nếu chưa có thì tạo mới.
+Vào trang IAM, vào thông tin IAM User và ấy Access Key Id và Serect Access Key, nếu chưa có thì tạo mới.
 
 ```bash
 aws configure
@@ -84,7 +84,7 @@ Và tiến hành cấu hình
 
 ![2.6.7.png](/images/2-preparation/2.6-prepare-metric-data/2.6.7.png)
 
-2. Sau đó là tải 2 file dữ liệu mà chúng ta đã chuẩn bị trước đó lên trên CloudWatch
+Sau đó là tải 2 file dữ liệu mà chúng ta đã chuẩn bị trước đó lên trên CloudWatch
 
 ```bash
 aws cloudwatch put-metric-data --namespace 'FCJ Management Custom Metrics' --metric-data file://metric-cpu.json

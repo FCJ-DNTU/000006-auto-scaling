@@ -12,13 +12,13 @@ Since Predictive Scaling requires more than 2 days' worth of data to make predic
 
 ### Preparation Steps
 
-1. First, create a new folder named `metric-preparation` and navigate into this directory.
+First, create a new folder named `metric-preparation` and navigate into this directory.
 
 ```bash
 mkdir metric-preparation && cd metric-preparation
 ```
 
-2. Then, download the script to prepare the data.
+Then, download the script to prepare the data.
 
 ```bash
 curl -o prepare-metric-data.sh https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/prepare-metric-data.sh
@@ -26,7 +26,7 @@ curl -o prepare-metric-data.sh https://raw.githubusercontent.com/awslabs/ec2-spo
 
 ![2.6.1.png](/images/2-preparation/2.6-prepare-metric-data/2.6.1.png)
 
-3. After downloading, modify the script slightly.
+After downloading, modify the script slightly.
 
 ```bash
 vim prepare-metric-data.sh
@@ -34,7 +34,7 @@ vim prepare-metric-data.sh
 
 ![2.6.2.png](/images/2-preparation/2.6-prepare-metric-data/2.6.2.png)
 
-4. Once the script is edited, proceed to download the raw data, which is why we need to prepare this data processing script first. Start with metrics for the instances.
+Once the script is edited, proceed to download the raw data, which is why we need to prepare this data processing script first. Start with metrics for the instances.
 
 ```bash
 curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/metric-cpu.json
@@ -42,7 +42,7 @@ curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-works
 
 ![2.6.3.png](/images/2-preparation/2.6-prepare-metric-data/2.6.3.png)
 
-5. Next, download the data for CPU.
+Next, download the data for CPU.
 
 ```bash
 curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-workshops/master/workshops/efficient-and-resilient-ec2-auto-scaling/metric-cpu.json
@@ -50,7 +50,7 @@ curl -o metric-cpu.json https://raw.githubusercontent.com/awslabs/ec2-spot-works
 
 ![2.6.4.png](/images/2-preparation/2.6-prepare-metric-data/2.6.4.png)
 
-6. Edit the two types of data one by one, starting with CPU.
+Edit the two types of data one by one, starting with CPU.
 
 ```bash
 bash prepare-metric-data.sh metric-cpu.json FCJ-Management-ASG && cat metric-cpu.json
@@ -74,7 +74,7 @@ The parameter **FCJ-Management-ASG** that appears in the two commands above is t
 
 In Amazon Linux 2023, if you are using the correct AMI, AWS CLI is pre-installed. At this point, you only need to configure the credentials. Remember that you must have an IAM User with sufficient permissions to upload data to CloudWatch or at least enough to complete this workshop.
 
-1. Go to the IAM page, open the IAM User details, and get the Access Key Id and Secret Access Key. If you don't have one, create a new one.
+Go to the IAM page, open the IAM User details, and get the Access Key Id and Secret Access Key. If you don't have one, create a new one.
 
 ```bash
 aws configure
@@ -84,7 +84,7 @@ And configure the credentials.
 
 ![2.6.7.png](/images/2-preparation/2.6-prepare-metric-data/2.6.7.png)
 
-2. After that, upload the two data files we prepared earlier to CloudWatch.
+After that, upload the two data files we prepared earlier to CloudWatch.
 
 ```bash
 aws cloudwatch put-metric-data --namespace 'FCJ Management Custom Metrics' --metric-data file://metric-cpu.json
