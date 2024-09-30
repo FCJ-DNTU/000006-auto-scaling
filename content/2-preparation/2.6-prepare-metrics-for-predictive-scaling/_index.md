@@ -1,5 +1,5 @@
 ---
-title: "Deploy Web Server"
+title: "Prepare metric for Predictive scaling"
 date: "`r Sys.Date()`"
 weight: 6
 chapter: false

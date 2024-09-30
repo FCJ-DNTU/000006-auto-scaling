@@ -13,23 +13,6 @@ Trong hướng dẫn này, chúng ta sẽ thực hiện triển khai ứng dụn
 
 Hãy đảm bảo bạn đã xem qua tài liệu [Triển khai Ứng dụng FCJ Management trên Máy ảo Windows/AmazonLinux](https://000004.awsstudygroup.com/) để nắm vững cách triển khai ứng dụng trên máy ảo. Chúng ta sẽ cần sử dụng máy ảo **FCJ Management** đã triển khai để thực hiện việc triển khai đồng loạt và mở rộng trong Auto Scaling Group.
 
-#### Auto Scaling Group
-
-**Auto Scaling Group** (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có khả năng tự động điều chỉnh số lượng các EC2 Instance thành viên dựa trên các chính sách co giãn mà bạn đặt ra.
-
-#### Launch Template
-
-**Launch Template** (khuôn mẫu khởi tạo) là một tính năng cho phép bạn tạo ra các khuôn mẫu để khởi tạo EC2 Instance. Điều này giúp bạn tự động hóa và đơn giản hóa việc khởi tạo các EC2 Instance cho dịch vụ Auto Scaling (co giãn tự động).
-
-#### Load Balancer
-
-**Load Balancer** (máy cân bằng tải) là một công cụ cho phép phân phối lưu lượng dữ liệu tới các tài nguyên AWS (trong trường hợp này là các EC2 Instances) trong một Target Group cụ thể.
-
-#### Target Group
-
-**Target Group** (nhóm mục tiêu) là một nhóm các tài nguyên AWS sẽ nhận lưu lượng dữ liệu từ Load Balancer và tiếp tục truyền chuyển nó.
-
-![Auto Scaling Group](/images/2-Prerequiste/0.png?featherlight=false&width=50pc)
 
 #### Nội dung
 
