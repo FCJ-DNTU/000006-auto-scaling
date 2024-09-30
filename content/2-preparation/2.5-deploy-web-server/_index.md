@@ -14,7 +14,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 
 ![Image](/images/2-preparation/2.5-deploy-web-server/2.5.1.png?featherlight=false&width=90pc)
 
-2. Sử dụng nvm để cài đặt  Node.js bằng cách nhập nội dung sau vào dòng lệnh.
+2. To install Node.js using nvm, enter the following command in the terminal.
 
 ```
 nvm install 20
@@ -22,7 +22,7 @@ nvm install 20
 
 ![Image](/images/2-preparation/2.5-deploy-web-server/2.5.2.png?featherlight=false&width=90pc)
 
-3. Thực hiện clone repository code ứng dụng
+3. Clone the application repository by running the following command in your terminal:
    
 ```
 git clone https://github.com/First-Cloud-Journey/000004-EC2.git
