@@ -6,7 +6,7 @@ chapter: false
 pre: "<strong>2.1. </strong>"
 ---
 
-#### Tạo VPC
+#### Create VPC
 1. Go to the [AWS Management Console](https://aws.amazon.com/premiumsupport/knowledge-center/sign-in-console/)
    - Find **VPC**
    - Select **VPC**
